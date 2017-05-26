@@ -11,5 +11,8 @@ MAC CHAT
 展示图片
 ==============
 
+* [聊天模块]
 ![image](https://raw.githubusercontent.com/maibou8888/ECMacDemo_OC/master/showIMG/1.png)
+
+* [联系人模块]
 ![image](https://raw.githubusercontent.com/maibou8888/ECMacDemo_OC/master/showIMG/2.png)
