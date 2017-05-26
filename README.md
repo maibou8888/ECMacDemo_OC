@@ -8,5 +8,8 @@ MAC CHAT
 
 * [注意注意] 静态库有点大  在压缩包里 需要将静态库拖入ytx_mac_sdk文件夹下面的lib里面
 
-<img src="http://github.com/maibou8888/ECMacDemo_OC/raw/master/1.png" width="2004"><br/>
-<img src="http://github.com/maibou8888/ECMacDemo_OC/raw/master/2.png" width="1992">
+展示图片
+==============
+
+![image](http://github.com/maibou8888/ECMacDemo_OC/showIMG/1.png)
+![image](http://github.com/maibou8888/ECMacDemo_OC/showIMG/2.png)
