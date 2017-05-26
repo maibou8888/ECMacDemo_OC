@@ -11,5 +11,5 @@ MAC CHAT
 展示图片
 ==============
 
-![image](http://github.com/maibou8888/ECMacDemo_OC/showIMG/1.png)
-![image](http://github.com/maibou8888/ECMacDemo_OC/showIMG/2.png)
+![image](https://raw.githubusercontent.com/maibou8888/ECMacDemo_OC/master/showIMG/1.png)
+![image](https://raw.githubusercontent.com/maibou8888/ECMacDemo_OC/master/showIMG/2.png)
