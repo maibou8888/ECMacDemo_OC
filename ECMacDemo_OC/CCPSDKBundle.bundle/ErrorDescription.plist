@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>100</key>
+	<string>连接中...</string>
+	<key>200</key>
+	<string>成功</string>
+	<key>170001</key>
+	<string>长度超过规定</string>
+	<key>170002</key>
+	<string>必选参数为空</string>
+	<key>170003</key>
+	<string>未登录</string>
+	<key>170004</key>
+	<string>发送消息失败</string>
+	<key>170005</key>
+	<string>正在录音，当前只能录制一个，请先停止</string>
+	<key>170006</key>
+	<string>录音超时，60秒长度</string>
+	<key>170007</key>
+	<string>录音已经停止，当前未录音调用停止录音</string>
+	<key>170008</key>
+	<string>录音时间过短，不超过1秒</string>
+	<key>170011</key>
+	<string>文件不存在</string>
+	<key>170012</key>
+	<string>传入的参数类型错误</string>
+	<key>175004</key>
+	<string>您的设备在其他地方登陆，被踢</string>
+	<key>520016</key>
+	<string>token认证失败</string>
+	<key>529999</key>
+	<string>鉴权服务器异常</string>
+	<key>559999</key>
+	<string>连接服务器异常</string>
+	<key>590017</key>
+	<string>已经加入在群组中</string>
+	<key>580010</key>
+	<string>发送文本被禁言</string>
+	<key>560072</key>
+	<string>不在该群组中</string>
+	<key>560073</key>
+	<string>发送附件被禁言</string>
+</dict>
+</plist>

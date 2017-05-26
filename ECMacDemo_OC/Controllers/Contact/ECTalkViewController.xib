@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ECTalkViewController">
+            <connections>
+                <outlet property="accountLabel" destination="TWk-1c-tyP" id="5FD-qd-pw9"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d6G-lx-EVk">
+                    <rect key="frame" x="94" y="33" width="112" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="LH8-TU-HJ1"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="发起聊天" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kgJ-lq-TqV">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="startChatBtnClicked:" target="-2" id="ory-tA-wha"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWk-1c-tyP">
+                    <rect key="frame" x="60" y="95" width="180" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="TdA-gu-8wM"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="请输入要发起会话的账号" drawsBackground="YES" id="Awv-gV-Uhm">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="d6G-lx-EVk" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="CB5-Zm-Vi6"/>
+                <constraint firstAttribute="trailing" secondItem="TWk-1c-tyP" secondAttribute="trailing" constant="60" id="FHV-ve-VB7"/>
+                <constraint firstAttribute="bottom" secondItem="d6G-lx-EVk" secondAttribute="bottom" constant="40" id="SfF-NG-dQa"/>
+                <constraint firstItem="TWk-1c-tyP" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="40" id="Su3-yn-d01"/>
+                <constraint firstItem="TWk-1c-tyP" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="60" id="f3L-gS-da6"/>
+            </constraints>
+            <point key="canvasLocation" x="-79" y="16"/>
+        </customView>
+    </objects>
+</document>

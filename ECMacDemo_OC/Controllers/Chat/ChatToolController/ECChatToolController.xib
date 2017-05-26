@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ECChatToolController">
+            <connections>
+                <outlet property="inputView" destination="1OV-Pf-3qH" id="Mzx-b9-4Pa"/>
+                <outlet property="toolView" destination="U3z-hS-aft" id="1jh-b3-Pwz"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="voiceImageView" destination="DJK-79-NQC" id="uXI-Nv-3WH"/>
+                <outlet property="voiceTxt" destination="05j-VR-Cgb" id="MVc-cn-fiQ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="U3z-hS-aft" customClass="ECChatToolView">
+                    <rect key="frame" x="0.0" y="239" width="480" height="40"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="chX-dE-yVV" customClass="ECMouseButton">
+                            <rect key="frame" x="30" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="chX-dE-yVV" secondAttribute="height" multiplier="1:1" id="RoL-V4-lcv"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="systemface_normal" imagePosition="only" alignment="center" alternateImage="systemface_press" imageScaling="proportionallyDown" inset="2" id="4g9-kI-Duv">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="emojiBtnClicked:" target="-2" id="j9z-0b-mKn"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9y9-tL-SIx" customClass="ECMouseButton">
+                            <rect key="frame" x="80" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="9y9-tL-SIx" secondAttribute="height" multiplier="1:1" id="lbx-75-Ai4"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="groupfile-normal" imagePosition="only" alignment="center" alternateImage="groupfile-hover" imageScaling="proportionallyDown" inset="2" id="bCK-ll-4bL">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="fileBtnClicked:" target="-2" id="UAv-3g-wKg"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b6F-jQ-dUg" customClass="ECMouseButton">
+                            <rect key="frame" x="130" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="b6F-jQ-dUg" secondAttribute="height" multiplier="1:1" id="CW2-dG-Szt"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="recording-normal" imagePosition="only" alignment="center" alternateImage="recording-hover" imageScaling="proportionallyDown" inset="2" id="FC6-su-vwZ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="voiceBtnClicked:" target="-2" id="UZf-5W-Zzv"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m4Z-i3-qSX" customClass="ECMouseButton">
+                            <rect key="frame" x="180" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="m4Z-i3-qSX" secondAttribute="height" multiplier="1:1" id="h3q-aZ-LRZ"/>
+                            </constraints>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="toolbar_phone_normal" imagePosition="only" alignment="center" alternateImage="toolbar_phone_down" imageScaling="proportionallyDown" inset="2" id="3y7-9n-8Lc">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="voiceCallBtnClicked:" target="-2" id="6fO-72-R3I"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ipP-ad-62o" customClass="ECMouseButton">
+                            <rect key="frame" x="230" y="10" width="20" height="20"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="video_left" imagePosition="only" alignment="center" alternateImage="video_left" imageScaling="proportionallyDown" inset="2" id="Ahf-hp-P5y">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="videoCallBtnClicked:" target="-2" id="arD-6q-tFk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="9y9-tL-SIx" firstAttribute="width" secondItem="9y9-tL-SIx" secondAttribute="height" multiplier="1:1" id="1w9-Sb-4Dq"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="bottom" secondItem="chX-dE-yVV" secondAttribute="bottom" id="3H1-5j-96s"/>
+                        <constraint firstItem="b6F-jQ-dUg" firstAttribute="top" secondItem="chX-dE-yVV" secondAttribute="top" id="6KH-m7-JFw"/>
+                        <constraint firstItem="b6F-jQ-dUg" firstAttribute="width" secondItem="b6F-jQ-dUg" secondAttribute="height" multiplier="1:1" id="G2S-AJ-YAC"/>
+                        <constraint firstItem="b6F-jQ-dUg" firstAttribute="leading" secondItem="9y9-tL-SIx" secondAttribute="trailing" constant="30" id="Mkj-C1-HmO"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="width" secondItem="m4Z-i3-qSX" secondAttribute="height" multiplier="1:1" id="S7O-Da-u57"/>
+                        <constraint firstItem="ipP-ad-62o" firstAttribute="top" secondItem="m4Z-i3-qSX" secondAttribute="top" id="SNg-A3-eki"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="width" secondItem="m4Z-i3-qSX" secondAttribute="height" multiplier="1:1" id="Ux7-pp-2kF"/>
+                        <constraint firstItem="9y9-tL-SIx" firstAttribute="leading" secondItem="chX-dE-yVV" secondAttribute="trailing" constant="30" id="X3F-2s-spm"/>
+                        <constraint firstItem="b6F-jQ-dUg" firstAttribute="bottom" secondItem="chX-dE-yVV" secondAttribute="bottom" id="YbJ-Tl-r9S"/>
+                        <constraint firstItem="ipP-ad-62o" firstAttribute="height" secondItem="m4Z-i3-qSX" secondAttribute="height" id="YvQ-kn-95C"/>
+                        <constraint firstItem="chX-dE-yVV" firstAttribute="leading" secondItem="U3z-hS-aft" secondAttribute="leading" constant="30" id="bmm-e5-MDm"/>
+                        <constraint firstItem="9y9-tL-SIx" firstAttribute="top" secondItem="chX-dE-yVV" secondAttribute="top" id="bzD-rM-r35"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="leading" secondItem="b6F-jQ-dUg" secondAttribute="trailing" constant="30" id="d0e-5O-cdb"/>
+                        <constraint firstItem="chX-dE-yVV" firstAttribute="top" secondItem="U3z-hS-aft" secondAttribute="top" constant="10" id="fVR-B2-7PW"/>
+                        <constraint firstItem="ipP-ad-62o" firstAttribute="width" secondItem="m4Z-i3-qSX" secondAttribute="width" id="fnk-OM-3Qc"/>
+                        <constraint firstItem="ipP-ad-62o" firstAttribute="leading" secondItem="m4Z-i3-qSX" secondAttribute="trailing" constant="30" id="i8I-77-q1p"/>
+                        <constraint firstItem="9y9-tL-SIx" firstAttribute="bottom" secondItem="chX-dE-yVV" secondAttribute="bottom" id="jns-Ko-yM0"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="width" secondItem="chX-dE-yVV" secondAttribute="width" id="l4i-J0-9mx"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="height" secondItem="chX-dE-yVV" secondAttribute="height" id="rf3-gd-2t7"/>
+                        <constraint firstAttribute="height" constant="40" id="uqK-f3-irj"/>
+                        <constraint firstItem="m4Z-i3-qSX" firstAttribute="top" secondItem="chX-dE-yVV" secondAttribute="top" id="wYt-fD-NJG"/>
+                        <constraint firstAttribute="bottom" secondItem="chX-dE-yVV" secondAttribute="bottom" constant="10" id="wnh-5u-yHH"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="emojiBtn" destination="chX-dE-yVV" id="D9w-c9-LzG"/>
+                        <outlet property="fileBtn" destination="9y9-tL-SIx" id="s22-hF-uWW"/>
+                        <outlet property="videoCallBtn" destination="ipP-ad-62o" id="B5T-j9-aDT"/>
+                        <outlet property="voiceBtn" destination="b6F-jQ-dUg" id="zhJ-JD-tJP"/>
+                        <outlet property="voiceCallBtn" destination="m4Z-i3-qSX" id="1i9-Oz-fnQ"/>
+                    </connections>
+                </customView>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-SR-Mwm">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="239"/>
+                    <clipView key="contentView" id="GJv-XG-VYn">
+                        <rect key="frame" x="1" y="1" width="463" height="237"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="1OV-Pf-3qH">
+                                <rect key="frame" x="0.0" y="0.0" width="463" height="237"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="463" height="237"/>
+                                <size key="maxSize" width="480" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-2" id="2xz-Fk-Dae"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="RCm-NA-TWo">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Te8-E4-Dgn">
+                        <rect key="frame" x="464" y="1" width="15" height="237"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJK-79-NQC">
+                    <rect key="frame" x="215" y="95" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2Uo-w6-vdn"/>
+                        <constraint firstAttribute="width" constant="50" id="UfP-a2-otj"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="recording01" id="yMr-TE-xvu"/>
+                </imageView>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05j-VR-Cgb">
+                    <rect key="frame" x="168" y="75" width="144" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="bqn-zj-q0P"/>
+                        <constraint firstAttribute="width" constant="140" id="xzP-rQ-4ym"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="长按录音" id="8Gq-hA-x1M">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <color key="textColor" red="0.79215686269999996" green="0.7843137255" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="U3z-hS-aft" secondAttribute="trailing" id="F6Y-bs-uMm"/>
+                <constraint firstItem="05j-VR-Cgb" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="H75-ed-urU"/>
+                <constraint firstItem="05j-VR-Cgb" firstAttribute="top" secondItem="DJK-79-NQC" secondAttribute="bottom" id="HmP-pp-cMT"/>
+                <constraint firstAttribute="trailing" secondItem="BZy-SR-Mwm" secondAttribute="trailing" id="KEv-fP-tf2"/>
+                <constraint firstItem="U3z-hS-aft" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Ukq-QN-1XF"/>
+                <constraint firstItem="BZy-SR-Mwm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Vr4-T4-ZLk"/>
+                <constraint firstAttribute="bottom" secondItem="BZy-SR-Mwm" secondAttribute="bottom" id="YAr-My-1Bp"/>
+                <constraint firstItem="BZy-SR-Mwm" firstAttribute="top" secondItem="U3z-hS-aft" secondAttribute="bottom" id="gU2-0Y-p2p"/>
+                <constraint firstItem="DJK-79-NQC" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="hjj-fv-OD4"/>
+                <constraint firstItem="U3z-hS-aft" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="hu2-Xu-BDb"/>
+                <constraint firstItem="DJK-79-NQC" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" constant="20" id="pbM-oa-xup"/>
+            </constraints>
+            <point key="canvasLocation" x="-2" y="41"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="groupfile-hover" width="18" height="18"/>
+        <image name="groupfile-normal" width="18" height="18"/>
+        <image name="recording-hover" width="24" height="24"/>
+        <image name="recording-normal" width="24" height="24"/>
+        <image name="recording01" width="52" height="55"/>
+        <image name="systemface_normal" width="24" height="24"/>
+        <image name="systemface_press" width="24" height="24"/>
+        <image name="toolbar_phone_down" width="24" height="24"/>
+        <image name="toolbar_phone_normal" width="24" height="24"/>
+        <image name="video_left" width="27.5" height="27.5"/>
+    </resources>
+</document>

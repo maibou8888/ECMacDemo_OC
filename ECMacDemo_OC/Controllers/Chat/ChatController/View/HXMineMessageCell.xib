@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HXMineMessageCell"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="HXMineMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v0C-RV-1IU">
+                    <rect key="frame" x="389" y="30" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="0co-o9-zkF"/>
+                        <constraint firstAttribute="height" constant="40" id="RSA-Qm-ARp"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Q04-dh-JDg"/>
+                </imageView>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-0I-9OQ">
+                    <rect key="frame" x="62" y="35" width="320" height="30"/>
+                    <clipView key="contentView" id="PUp-wG-378">
+                        <rect key="frame" x="1" y="1" width="303" height="28"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="UgP-jI-K0C" customClass="HXTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="303" height="28"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <attributedString key="textStorage">
+                                    <fragment content="v">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="12"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="IuE-eC-w2t"/>
+                        <constraint firstAttribute="height" constant="30" id="W9l-b7-V9G"/>
+                    </constraints>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="KJl-9B-nOj">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="4X0-Ie-bGG">
+                        <rect key="frame" x="304" y="1" width="15" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Q3i-0I-9OQ" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="35" id="ZYo-K9-aPd"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="leading" secondItem="Q3i-0I-9OQ" secondAttribute="trailing" constant="7" id="hya-l5-j60"/>
+                <constraint firstItem="v0C-RV-1IU" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="k0j-TF-2OC"/>
+                <constraint firstAttribute="trailing" secondItem="v0C-RV-1IU" secondAttribute="trailing" constant="20" id="nu1-Ud-gFC"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImage" destination="v0C-RV-1IU" id="DQy-aM-ZMq"/>
+                <outlet property="msgTextView" destination="UgP-jI-K0C" id="BAE-k3-Z37"/>
+                <outlet property="textHeightCons" destination="W9l-b7-V9G" id="YlV-xD-I7c"/>
+                <outlet property="textWidthCons" destination="IuE-eC-w2t" id="UmH-5Q-VD5"/>
+            </connections>
+            <point key="canvasLocation" x="-435" y="-258"/>
+        </customView>
+    </objects>
+</document>

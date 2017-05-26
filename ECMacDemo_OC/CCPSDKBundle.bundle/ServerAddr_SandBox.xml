@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerAddr version="2">
+    <Connector>
+        <server>
+            <host></host>
+            <port></port>
+        </server>
+    </Connector>
+    <LVS>
+        <server>
+            <host></host>
+            <port></port>
+        </server>
+    </LVS>
+    <FileServer>
+        <server>
+            <host></host>
+            <port></port>
+        </server>
+    </FileServer>
+</ServerAddr>

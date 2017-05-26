@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HXMsgDatailCell"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="HXMsgDatailCell">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Afh-bh-gIs">
+                    <rect key="frame" x="20" y="30" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="6GS-Za-2Ai"/>
+                        <constraint firstAttribute="height" constant="40" id="ozP-YV-phk"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="A6W-Yc-UiG"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-MX-vaA">
+                    <rect key="frame" x="65" y="70" width="29" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="张三" id="Dcf-Zh-G8y">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-f1-9NU">
+                    <rect key="frame" x="67" y="35" width="320" height="30"/>
+                    <clipView key="contentView" id="0fm-P9-dTE">
+                        <rect key="frame" x="1" y="1" width="303" height="28"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="qxg-Qr-h9U" customClass="HXTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="303" height="28"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="E0C-Km-pPA"/>
+                        <constraint firstAttribute="width" constant="320" id="nbS-5E-vzZ"/>
+                    </constraints>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="LWZ-7F-zY1">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KvZ-N1-JAz">
+                        <rect key="frame" x="304" y="1" width="15" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Afh-bh-gIs" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="6a7-Qn-JoO"/>
+                <constraint firstItem="dJH-f1-9NU" firstAttribute="leading" secondItem="Afh-bh-gIs" secondAttribute="trailing" constant="7" id="MOO-Ib-l1c"/>
+                <constraint firstItem="kbA-MX-vaA" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="14" id="V5j-t5-uik"/>
+                <constraint firstItem="dJH-f1-9NU" firstAttribute="top" secondItem="kbA-MX-vaA" secondAttribute="bottom" constant="5" id="WqE-mS-tYK"/>
+                <constraint firstItem="Afh-bh-gIs" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="zeT-s1-TOZ"/>
+                <constraint firstItem="kbA-MX-vaA" firstAttribute="leading" secondItem="dJH-f1-9NU" secondAttribute="leading" id="zwn-0W-KEt"/>
+            </constraints>
+            <connections>
+                <outlet property="attTextView" destination="qxg-Qr-h9U" id="aQ3-nh-ztX"/>
+                <outlet property="iconImageView" destination="Afh-bh-gIs" id="thM-Uh-wXZ"/>
+                <outlet property="nameLabel" destination="kbA-MX-vaA" id="Sdr-Oe-MQD"/>
+                <outlet property="textHeightCons" destination="E0C-Km-pPA" id="Fvv-5S-HCA"/>
+                <outlet property="textWidthCons" destination="nbS-5E-vzZ" id="GWG-ND-Cyg"/>
+            </connections>
+            <point key="canvasLocation" x="-981.5" y="-504"/>
+        </customView>
+    </objects>
+</document>

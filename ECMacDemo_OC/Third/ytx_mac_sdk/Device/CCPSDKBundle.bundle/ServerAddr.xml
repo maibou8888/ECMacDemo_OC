@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerAddr version="4">
+    <Connector>
+        <server>
+            <host>192.168.179.105</host>
+            <port>8085</port>
+        </server>
+    </Connector>
+    <LVS>
+        <server>
+            <host>192.168.179.105</host>
+            <port>8888</port>
+        </server>
+    </LVS>
+    <FileServer>
+        <server>
+            <host>192.168.179.105</host>
+            <port>8090</port>
+        </server>
+    </FileServer>
+</ServerAddr>

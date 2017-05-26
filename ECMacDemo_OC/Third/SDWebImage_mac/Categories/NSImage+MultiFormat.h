@@ -1,0 +1,16 @@
+//
+//  UIImage+MultiFormat.h
+//  SDWebImage
+//
+//  Created by Olivier Poitrey on 07/06/13.
+//  Copyright (c) 2013 Dailymotion. All rights reserved.
+//
+
+#import "SDWebImageCompat.h"
+
+@interface UIImage (MultiFormat)
+
++ (UIImage *)sd_imageWithData:(NSData *)data;
+- (NSBitmapImageRep *)bitmapImageRepresentation;
+
+@end

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ECVoiceCallViewController">
+            <connections>
+                <outlet property="acceptBtn" destination="Vqt-lH-XJz" id="YO3-L2-SyF"/>
+                <outlet property="hangUpConstraint" destination="m8r-zm-K4h" id="YAu-yS-P5R"/>
+                <outlet property="imageView" destination="4KX-gr-0tf" id="SxD-cU-SFk"/>
+                <outlet property="msgLabel" destination="xxr-AJ-kER" id="f2Y-Ww-LHb"/>
+                <outlet property="nickLabel" destination="6vI-e4-paS" id="Xy3-jc-rjV"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4KX-gr-0tf">
+                    <rect key="frame" x="120" y="310" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="HtF-rn-o4d"/>
+                        <constraint firstAttribute="width" constant="80" id="fQU-qH-tSH"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wode_touxiang" id="UTf-p8-4Cu"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-e4-paS">
+                    <rect key="frame" x="-2" y="255" width="324" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vl0-EK-gqt"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="昵称" id="BXo-xv-1fw">
+                        <font key="font" size="22" name=".PingFangSC-Regular"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxr-AJ-kER">
+                    <rect key="frame" x="-2" y="215" width="324" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="YRQ-sm-0tz"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="正在等待对方接受邀请..." id="tiQ-Y6-pfC">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pxm-Gc-9s5">
+                    <rect key="frame" x="54" y="41" width="73" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5tR-FT-IcZ"/>
+                        <constraint firstAttribute="width" constant="60" id="MLy-Ru-emD"/>
+                    </constraints>
+                    <buttonCell key="cell" type="round" bezelStyle="circular" image="hungUp" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I7s-dv-atH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="hangUpBtnClicked:" target="-2" id="oJn-Cx-wdY"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vqt-lH-XJz">
+                    <rect key="frame" x="194" y="41" width="73" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="1UB-pc-A0A"/>
+                        <constraint firstAttribute="height" constant="60" id="gux-pt-m5i"/>
+                    </constraints>
+                    <buttonCell key="cell" type="round" bezelStyle="circular" image="answering_icon" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bCB-sI-aJE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="acceptBtnClicked:" target="-2" id="nxR-yL-jZZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xxr-AJ-kER" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="2Tn-Wb-wJD"/>
+                <constraint firstAttribute="trailing" secondItem="xxr-AJ-kER" secondAttribute="trailing" id="410-HD-IBS"/>
+                <constraint firstItem="xxr-AJ-kER" firstAttribute="top" secondItem="6vI-e4-paS" secondAttribute="bottom" constant="10" id="ETa-BF-yds"/>
+                <constraint firstItem="Vqt-lH-XJz" firstAttribute="top" secondItem="pxm-Gc-9s5" secondAttribute="top" id="EUy-iw-Woi"/>
+                <constraint firstAttribute="bottom" secondItem="pxm-Gc-9s5" secondAttribute="bottom" constant="50" id="ITl-u0-JB5"/>
+                <constraint firstAttribute="trailing" secondItem="6vI-e4-paS" secondAttribute="trailing" id="O0k-78-fv2"/>
+                <constraint firstItem="6vI-e4-paS" firstAttribute="top" secondItem="4KX-gr-0tf" secondAttribute="bottom" constant="25" id="TXu-0d-tS9"/>
+                <constraint firstItem="6vI-e4-paS" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="gdY-JV-AYS"/>
+                <constraint firstItem="4KX-gr-0tf" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="60" id="gzb-Ti-TbP"/>
+                <constraint firstItem="pxm-Gc-9s5" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="60" id="m8r-zm-K4h"/>
+                <constraint firstAttribute="trailing" secondItem="Vqt-lH-XJz" secondAttribute="trailing" constant="60" id="q8x-Rj-Jiz"/>
+                <constraint firstItem="4KX-gr-0tf" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="yeb-XK-vXl"/>
+            </constraints>
+            <point key="canvasLocation" x="-487" y="3"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="answering_icon" width="73" height="73"/>
+        <image name="hungUp" width="73" height="73"/>
+        <image name="wode_touxiang" width="75.5" height="75.5"/>
+    </resources>
+</document>

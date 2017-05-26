@@ -1,0 +1,74 @@
+//
+//  ECPrefixHeader.pch
+//  ECMacDemo_OC
+//
+//  Created by huangjue on 2017/4/17.
+//  Copyright © 2017年 com.ronglian.yuntongxun. All rights reserved.
+//
+
+#ifndef ECPrefixHeader_pch
+#define ECPrefixHeader_pch
+
+#import "AppDelegate.h"
+#import "NSView+Frame.h"
+#import <Masonry/Masonry.h>
+#import "ECCommonTools.h"
+#import "NSColor+ECColor.h"
+#import "ECDeviceHeaders.h"
+#import "DJProgressHUD.h"
+
+#define lasttimeuser      @"lasttimeuser"
+#define lasttimeuserpwd     @"lasttimeuserpwd"
+#define AppConfigPlist        @"AppConfig.plist"
+#define AppConfig_AppKey        @"AppKey"
+#define AppConfig_AppToken        @"AppToken"
+#define EmotionSelectNotification   @"EmotionSelectNotification"
+
+#define MessagePageSize 15
+
+#define KNOTIFICATION_onNetworkChanged    @"KNOTIFICATION_onNetworkChanged"
+#define KNOTIFICATION_onSystemEvent         @"KNOTIFICATION_onSystemEvent"
+#define KNOTIFICATION_onMesssageChanged       @"KNOTIFICATION_onMesssageChanged"
+#define KNOTIFICATION_onRecordingAmplitude      @"KNOTIFICATION_onRecordingAmplitude"
+#define KNOTIFICATION_onReceivedGroupNotice       @"KNOTIFICATION_onReceivedGroupNotice"
+#define KNOTIFICATION_haveHistoryMessage            @"KNOTIFICATION_haveHistoryMessage"
+#define KNOTIFICATION_HistoryMessageCompletion    @"KNOTIFICATION_HistoryMessageCompletion"
+#define KNOTIFICATION_needInputName             @"KNOTIFICATION_needInputName"
+#define KNOTIFICATION_KickedOff               @"KNOTIFICATION_KickedOff"
+#define KNOTIFICATION_IsReadMessage         @"KNOTIFICATION_IsReadMessage"
+#define KNOTIFICATION_onConnected         @"KNOTIFICATION_onConnected"
+#define KNOTIFICATION_onClickSession        @"KNOTIFICATION_onClickSession"
+#define KNOTIFICATION_ReceiveMessageDelete    @"KNOTIFICATION_ReceiveMessageDelete"
+#define KNOTIFICATION_SendMessageCompletion     @"KNOTIFICATION_SendMessageCompletion"
+#define KNOTIFICATION_DownloadMessageCompletion   @"KNOTIFICATION_DownloadMessageCompletion"
+#define KNOTIFICATION_onCallEvent                   @"KNOTIFICATION_onCallEvent"
+#define KNOTIFICATION_onCallIncoming              @"KNOTIFICATION_onCallIncoming"
+#define KNOTIFICATION_getRemoteSize             @"KNOTIFICATION_getRemoteSize"
+#define KNOTIFICATION_selectContact           @"KNOTIFICATION_selectContact"
+#define KNOTIFICATION_createGroup           @"KNOTIFICATION_createGroup"
+
+#define Notification_center [NSNotificationCenter defaultCenter]
+#define BorderColor [NSColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1].CGColor
+
+// RGB颜色
+#define HXColor(r, g, b) [NSColor colorWithCalibratedRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define HXSColor(r, g, b) [NSColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define HXRandomColor HXColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define KErrorKey   @"kerrorkey"
+#define KMessageKey @"kmessagekey"
+
+#ifdef DEBUG
+#define EC_MacAppLog(fmt,...) {NSLog((fmt), ##__VA_ARGS__);}
+#else
+#define EC_MacAppLog(fmt,...) {}
+#endif
+
+#define EC_MAC_ScreenSize [NSScreen mainScreen].frame.size
+#define EC_MAC_OS_X_10_10 [ECCommonTools systemVersion]>=MAC_OS_X_VERSION_10_10
+#define EC_RGB_String(colorStr) [NSColor colorWithHexString:colorStr alpha:1.0f]
+#define EC_RGB_String_Alpha(colorStr,alp) [NSColor colorWithHexString:colorStr alpha:alp]
+#define EC_ImageNamed(str) [NSImage imageNamed:str]
+#endif /* ECPrefixHeader_pch */
