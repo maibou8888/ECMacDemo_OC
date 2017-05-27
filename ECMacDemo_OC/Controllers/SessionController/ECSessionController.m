@@ -48,6 +48,7 @@
 
 - (void)getTopSessionLists {
     [[ECDevice sharedInstance].messageManager getTopSessionLists:^(ECError *error, NSArray *topContactLists) {
+        
         if (error.errorCode == ECErrorType_NoError) {
             for (NSString *sessionId in topContactLists) {
                 [[IMMsgDBAccess sharedInstance] updateIsTopSessionId:sessionId isTop:YES];
@@ -87,7 +88,14 @@
     }];
 }
 
+- (void)deleteRow:(NSButton *)button {
+    [self.listArray removeObjectAtIndex:button.tag];
+    [self.tableView reloadData];
+}
+
 - (void)selectCellWithRow:(NSInteger)row {
+    if (!self.listArray.count) return;
+    
     NSMutableIndexSet *mutableSet = [NSMutableIndexSet new];
     [mutableSet addIndex:row];
     [self.tableView selectRowIndexes:mutableSet byExtendingSelection:NO];
@@ -109,6 +117,9 @@
         ECSession *tmpSession = self.listArray[row];
         cell = (ECSessionCell *)[tableView makeViewWithIdentifier:@"sessionCellReuse" owner:[tableView delegate]];
         cell.bageNum.title = [NSString stringWithFormat:@"%ld",(long)tmpSession.unreadCount];
+        cell.offBtn.target = self;
+        cell.offBtn.action = @selector(deleteRow:);
+        cell.offBtn.tag = row;
         
         if ([tmpSession.sessionId hasPrefix:@"g"]) {
             NSString * name = [[IMMsgDBAccess sharedInstance] getGroupNameOfId:tmpSession.sessionId];
@@ -151,4 +162,5 @@
         _listArray = [NSMutableArray array];
     return _listArray;
 }
+
 @end

@@ -41,7 +41,4 @@
     self.offBtn.hidden = YES;
 }
 
-- (IBAction)closeCell:(id)sender {
-    EC_MacAppLog(@"删除session");
-}
 @end

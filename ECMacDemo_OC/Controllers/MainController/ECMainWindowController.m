@@ -48,8 +48,10 @@
     [self registerNotify];
     
     NSArray *array = [[DeviceDBHelper sharedInstance] getMyCustomSession];
-    ECSession *tmpSession = array[0];
-    [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_onClickSession object:tmpSession.sessionId];
+    if (array.count) {
+        ECSession *tmpSession = array[0];
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_onClickSession object:tmpSession.sessionId];
+    }
 }
 
 #pragma mark - 基本方法
