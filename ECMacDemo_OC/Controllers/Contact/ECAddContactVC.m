@@ -90,9 +90,11 @@
                 }
             }
             
-            [_dataModel.nodes insertObject:discussModel atIndex:0];
-            [_dataModel.nodes insertObject:groupModel atIndex:0];
-
+            if (discussModel.nodes.count)
+                [_dataModel.nodes insertObject:discussModel atIndex:0];
+            if (groupModel.nodes.count)
+                [_dataModel.nodes insertObject:groupModel atIndex:0];
+            
             [self.contactView reloadData];
             [self.contactView setDoubleAction:@selector(doubleAction:)];
             
